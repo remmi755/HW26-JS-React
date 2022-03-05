@@ -27,9 +27,7 @@ const allWorkers = [
 ]
 
 const App = () => {
-
     const [workers, setWorkers] = useState(allWorkers);
-
     function change(prop, event, id) { // изменение input поля
         setWorkers(workers.map(obj => {
                 if (obj.id === id) {
@@ -54,7 +52,6 @@ const App = () => {
         <tbody>
         {
             workers.map((obj) =>
-
                 <tr key={obj.id}>
                     <td>{obj.name}</td>
                     <td>{obj.lastName}</td>
@@ -63,7 +60,6 @@ const App = () => {
                     <td><input type="text" name="price" value={obj.price}
                                onChange={event => change('price', event, obj.id)}/></td>
                     <td>{obj.days * obj.price}</td>
-
                 </tr>
             )
         }
