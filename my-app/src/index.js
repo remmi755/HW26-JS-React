@@ -28,7 +28,7 @@ const allWorkers = [
 
 const App = () => {
     const [workers, setWorkers] = useState(allWorkers);
-    function change(prop, event, id) { // изменение input поля
+    function change(prop, event, id) {
         setWorkers(workers.map(obj => {
                 if (obj.id === id) {
                     return {...obj, [prop]: event.target.value};
